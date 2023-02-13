@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE studentinfo [
+    <!ELEMENT studentinfo ANY>
+    <!ELEMENT student (fname,lname*,email,city,(mobile|phone)+)>
+    <!ELEMENT fname (#PCDATA)>
+    <!ELEMENT lname (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT city (#PCDATA)>
+    <!ELEMENT mobile (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!-- default value  -->
+    <!ATTLIST student stdID CDATA "(student123|student1234|student12345)">
+    <!ATTLIST fname gender CDATA "(M|F)">
+    <!ATTLIST email site CDATA #FIXED "gmail.com">
+
+    <!-- <!ENTITY phone SYSTEM "entity.dtd"> -->
+
+    <!ENTITY pk "+92">
+    <!ENTITY ind "+91">
+    <!ENTITY ban "+93">
+]>
+<!-- + mean one or more  -->
+<!-- * mean zero or more  -->
+<!-- ? zero or one  -->
+<studentinfo>
+    <student stdID="student123">
+        <fname gender="M">Wajeeh</fname>
+        <lname>Khan</lname>
+        <email site="gmail.com">wajeeh@gmail.com</email>
+        <city>Karachi</city>
+        <phone>&pk; 54646</phone>
+    </student>
+    <student stdID="student1234">
+        <fname gender="M">Wajeeh</fname>
+        <lname>Khan</lname>
+        <email>wajeeh@gmail.com</email>
+        <city>Karachi</city>
+        <mobile>&ind; 534155</mobile>
+    </student>
+    <student stdID="student12345">
+        <fname gender="M">Wajeeh</fname>
+        <lname>Khan</lname>
+        <email>wajeeh@gmail.com</email>
+        <city>Karachi</city>
+        <mobile>&ban; 534155</mobile>
+    </student>
+</studentinfo>

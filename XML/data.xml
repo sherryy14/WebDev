@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+
+<person>
+    <user type="1">
+        <fname>Muhammad</fname>
+        <lname>Shahryar</lname>
+        <email>mshahryar@gmail.com</email>
+    </user>
+    <user type="2">
+        <fname>Kashan</fname>
+        <lname>Bhatti</lname>
+        <email>mkashan@gmail.com</email>
+    </user>
+    <user type="3">
+        <fname>Roohan</fname>
+        <lname>Khan</lname>
+        <email>mroohan@gmail.com</email>
+    </user>
+</person>
+
+<!-- <person xmlns:a="http://www.sherry.com/namepace"
+        xmlns:b="http://www.abc.com/namepace"
+        >
+    xml ns namespace and a is an identifier for this element
+    <user id="1">
+        <a:fname>Muhammad</a:fname>
+        <a:lname>Shahryar</a:lname>
+        <a:email>mshahryar@mgail.com</a:email>
+    </user>
+    <user id="2">
+        <a:fname>Muhammad</a:fname>
+        <a:lname>Kashan</a:lname>
+        <a:email>mkashan@mgail.com</a:email>
+    </user>
+    <user id="3">
+        <b:fname>Muhammad</b:fname>
+        <b:lname>Wajeeh</b:lname>
+        <b:email>mwajeeh@mgail.com</b:email>
+    </user>
+</person> -->

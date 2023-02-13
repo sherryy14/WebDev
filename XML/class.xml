@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="headers.css" type="text/css"?>
+<class>
+    <student>
+        <fname id='23'>Ali</fname>
+        <lname>Khan</lname>
+        <age>23</age>
+        <time>09:30:10.5</time>
+        <attendance>Present</attendance>
+        <image>"image.jpg"</image>
+    </student>
+</class>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="products.xsl" type="text/xsl"?>
+<productList>
+    <productItem>
+        <title>Burger</title>
+        <price>$45</price>
+        <dec>Double Decker Huston House</dec>
+        <image>light.jfif</image>
+    </productItem>
+</productList>

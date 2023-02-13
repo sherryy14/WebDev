@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<studentdata> 
+
+    <student>
+        <fname>Muhammad</fname>
+        <lname>Shahryar</lname>
+        <email>sherry@gmail.com</email>
+        <phone>030365954</phone>
+        <batch>2207G2</batch>
+        <address>KHI</address>
+    </student>
+    <student> 
+        <fname>Muhammad</fname>
+        <lname>Kashan</lname>
+        <email>kashan@gmail.com</email>
+        <phone>030654658796</phone>
+        <batch>2207G1</batch>
+        <address>LHR</address>
+    </student>
+    <student>
+        <fname>Furqan</fname>
+        <lname>Sheikh</lname>
+        <email>furqan@gmail.com</email>
+        <phone>03065856265</phone>
+        <batch>2207G3</batch>
+        <address>ISL</address>
+    </student>
+
+</studentdata>

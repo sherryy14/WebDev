@@ -1,0 +1,15 @@
+class{
+    background-color: black;
+    display: block;
+    color: aliceblue;
+}
+fname{
+    display: block;
+    color: green;
+    font-size: 40px;
+}
+lname{
+    display: block;
+    color: blue;
+    font-size: 20px;
+}
