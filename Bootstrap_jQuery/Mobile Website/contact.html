@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS Style  -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>Contact</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white ms-5" href="#"><img src="images/logo.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+          <li class="nav-item">
+            <a class="nav-link text-white me-5 active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle text-white me-5 " href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Brands
+            </a>
+            <ul class="dropdown-menu bg-dark">
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Apple</a></li>
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Samsung</a></li>
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Vivo</a></li>
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Oppo</a></li>
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Huawie</a></li>
+              <li class="my-2"><a class="dropdown-item text-light" href="#">Redme</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-light" href="#">Up Comings . . .</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5  text-white" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-5  text-white activebtn" href="#">Contact Us</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="search-box">
+          <button class="btn btn-outline-light" type="submit" id="search-btn">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!---------------- Contact Form ----------------- -->
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-xxl-6 d-flex justify-content-center ">
+        <iframe class="rounded-3" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14472.37819861118!2d67.03455595!3d24.92884875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1666444180020!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="maps"></div>
+      </div>
+      <div class="col-xxl-6 d-flex justify-content-center mt-5">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input type="text" class="form-control" id="validationCustom01"  required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                required>
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">City</label>
+            <input type="text" class="form-control" id="validationCustom03" required>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">State</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Choose...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-outline-primary" type="submit">Submit form</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+
+    // -------   Google Map ------------- 
+
+    let map;
+       
+       function initMap() {
+           var location_1 = { lat: 24.9288488, lng: 67.034556 }
+           map = new google.maps.Map(document.getElementById("maps"), {
+               center: location_1,
+               zoom: 20,
+           });
+           const marker = new google.maps.Marker({
+               position:  location_1 ,
+               map : map,
+               label: "A",
+               title: "Aptech Learning Institute",
+               draggable: false,
+               animation: google.maps.Animation.DROP
+               // icon: 'mapicon.png'
+               
+           });
+       }
+
+       window.initMap = initMap;
+       
+  </script>
+<!-- ------------------ MAP API --------------  -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA
+&callback=initMap"></script>
+</body>
+
+</html>

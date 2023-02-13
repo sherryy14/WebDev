@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+        position: relative;
+    }
+    .active{
+        background: #000;
+        color: aliceblue;
+    }
+</style>
+<body>
+    <h1>JQuery</h1>
+    <button id="btn">Hide</button>
+    <button id="btn1">Show</button>
+    <button id="btn2">Hide/Show</button>
+    <!-- <div></div> -->
+    <input type="text" id="txt"> 
+    <button id="sbt">Submit</button>
+    <button id="rv">Remove</button>
+    
+    <ol>
+        <li>Name1</li>
+        <li>Name2</li>
+        <li>Name3</li>   
+    </ol>
+    <script>
+        $(document).ready(function(){
+            $('#sbt').click(function(){
+                let a = $('#txt').val()
+                $('ol').append(`<li>${a}</li>`)
+            })
+            // $('#rv').click(function(){
+            //     $('li')[0].remove()
+            // })
+            $('#rv').mouseenter(function(){
+                $('li').toggleClass('active')
+            })
+
+
+
+            $('#btn').click(function(){
+                $('h1').hide(3000)
+            })
+            $('#btn1').click(function(){
+                $('div').stop()
+            })
+            $('#btn2').show(function(){
+                $('div').animate({
+                    left: '100px',
+                    top: '50px'
+                },5000)
+            })
+
+
+
+
+
+
+
+        })
+    </script>
+</body>
+</html>

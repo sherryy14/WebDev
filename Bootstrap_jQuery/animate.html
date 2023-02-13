@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".header").show(function () {
+                $("div .para").animate({ bottom: '120px' }, 5000);
+                $("div .para").animate({ opacity: '1' });
+            });
+            $(".header").show(function () {
+                $("div .para1").animate({ bottom: '210px' }, 5000);
+                $("div .para1").animate({ opacity: '1' });
+            });
+        });
+    </script>
+</head>
+<style>
+    .header {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        background: url(robot.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .para {
+        position: absolute;
+        left: 10%;
+        bottom: 0;
+        opacity: 0.8;
+        font-size: 1.5em;
+        color: white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .para1 {
+        text-shadow: 2px 0 3px black;
+        color: white;
+        position: absolute;
+        left: 40%;
+        bottom: 10px;
+        /* opacity: 0.5; */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .navbar {
+        background-color: aqua;
+    }
+</style>
+
+<body class="p-0 m-0 border-0 bd-example">
+    <!-- -------------------- Header ---------------  -->
+    <header>
+        <!-- ------------------ Nav Bar -----------------   -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">Lost In Space</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-5">
+                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light ms-5" href="#">Actors</a>
+                        </li>
+                        <li class="nav-item dropdown ms-5">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Seasons
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light  ms-5">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-5" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light type=" submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- -------------- Header Section ---------------------  -->
+        <div class="header">
+            <!-- <img src="robot.webp" class="img-fluid" alt=""> -->
+            <h1 class="para1">We bring robots to life.</h1>
+            <p class="para">Hanson Robotics is an AI and robotics company dedicated to creating socially intelligent
+                machines that enrich the quality of our lives.</p>
+        </div>
+        <!-- -------------- Header End --------------  -->
+    </header>
+
+    <!-- ---------------- About ------------------  -->
+    <div class="container mt-5">
+        <h1 class="text-center">Why human-like robots?</h1>
+        <p class="text-center mt-5">Robots will soon be everywhere. How can we nurture them to be our friends and useful
+            collaborators? Robots with good aesthetic design, rich personalities, and social cognitive intelligence can
+            potentially connect deeply and meaningfully with humans. <br><br><br> <a href="#" class="btn btn-dark rounded-5 py-3 px-4">OUR ROBOTS</a> </p>
+    </div>
+
+
+</body>
+
+</html>

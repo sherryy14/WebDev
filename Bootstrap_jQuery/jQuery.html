@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    #div {
+        background-color: aqua;
+    }
+</style>
+
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button class="items">Submit</button>
+
+
+    <div id="div">
+        <ul>
+            <li class="l1" style="display:none">Item 1</li>
+            <li class="l2" style="display:none" >Item 2</li>
+            <li class="l3" style="display:none">Item 3</li>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        // Syntax ------------- 
+        // $(document).ready(function(){
+        //     $('#hide').click(function(){
+        //         $('li').hide(1000);
+        //     });
+        //     $('#show').click(function(){
+        //         $('li').show(1000);
+        //     });
+
+
+
+
+
+        // })
+
+        $(document).ready(function () {
+            // $('.items').dblclick(function(){
+            //     $('.l1').hide(); 
+            //     $('.l2').hide('fade'); 
+            //     $('.l3').hide(10000); 
+            // })
+
+
+            $(".items").click(function () {
+                $(".l1").fadeIn();
+                $(".l2").fadeIn("slow");
+                $(".l3").fadeIn(3000);
+            });
+            $("#show").click(function () {
+                $(".l1").fadeOut();
+                $(".l2").fadeOut("slow");
+                $(".l3").fadeOut(3000);
+            });
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    .nasar{
+        background-color: aqua;
+        width: 400px;
+        border: 2px solid red;
+    }
+</style>
+<body>
+    <!-- <a href="www.google.com">Google</a> -->
+
+    <button id="btn">Submit</button>
+    <div>
+        <h1>Remove</h1>
+        <ol>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+            <li>List</li>
+        </ol>
+
+
+    </div>
+
+    
+        <label for="">Username</label>
+        <input type="text" id="uname">
+        <label for="">Email</label>
+        <input type="email" id="email">
+        <input type="submit" value="Submit" id="submit">
+  
+
+
+
+
+    <table id="table" border="1">
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Hassan</td>
+            <td>hassan@gmail.com</td>
+        </tr>
+    </table>
+
+
+    <script>
+        $(document).ready(function(){
+        //    $('button').click(function(){
+        //     var anc = $('a').attr("href", "https://www.w3schools.com/jquery/");
+        //    alert(anc)
+        //    })
+
+
+
+            $('#btn').click(function(){
+                // $('div').css({'background-color':'red',"color":"white"})
+                $('div').addClass('nasar')
+            })
+
+
+
+        $('#submit').click(function(){
+            var username = $('#uname').val()
+            var email = $('#email').val()
+           
+
+            $('#table').append('<tr><td>'+username+ '</td><td>'+email+ "</td></tr>" )
+
+        })
+
+
+        // $('button').click(function(){
+        //     $('ol').prepend('<li>Item</li>')
+        // })
+        })
+    </script>
+    
+</body>
+</html>

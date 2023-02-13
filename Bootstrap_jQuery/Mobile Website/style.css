@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: black;
+
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 90vh;
+}
+
+.nav-item>a {
+    transition: 0.4 ease;
+    border-radius: 10px;
+}
+
+.nav-item>a:hover {
+    background-color: rgb(50, 47, 45);
+    text-decoration: underline;
+}
+
+#anc a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-shadow: 0 -2px 3px rgb(91, 184, 218);
+    color: whitesmoke;
+    margin: 10px 0;
+}
+
+#anc a:hover {
+    text-decoration: underline;
+}
+
+.card img {
+    transform: scaleX(1);
+    transition: .7s linear;
+}
+
+.card img:hover {
+    transform: scaleX(-1);
+
+
+    /* box-shadow: -1px -2px 2px gray; */
+}
+
+
+
+.navbar-brand img {
+    width: 60px;
+    height: 50px;
+}
+
+#brand:hover {
+    cursor: pointer;
+}
+
+.activebtn{
+    background-color: rgb(98, 86, 86);
+}
