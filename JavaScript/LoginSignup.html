@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="storage.js"></script>
+    <title>storage</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: url('loginbg.jfif');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: cornsilk; */
+        text-align: center;
+    }
+
+    .form1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: darkkhaki; */
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #submit,
+    #login {
+        background-color: darkcyan;
+        width: 5em;
+
+    }
+
+    input {
+        margin: 5px 0;
+        border: 2px solid black;
+    }
+
+    #checkbox {
+        position: relative;
+        right: 20px;
+    }
+
+    h1 {
+        text-shadow: -2px 2px 5px black;
+        color: wheat;
+    }
+
+    label {
+        color: yellow;
+    }
+    /* Password Rule Style  */
+    
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
+}
+</style>
+
+<body>
+    <!-- SignUp Form  -->
+    <div class="form">
+        <form name="signin">
+            <h1>Signup</h1>
+            <label for="">Username</label>
+            <input type="text" name="username" id="name" placeholder="Signup User" required>
+            <label for="">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your valid email" required>
+            <label for="">Password</label>
+            <input type="password" name="password" id="password"
+                title="password between 7 to 14 characters which contain at least one numeric digit and underscore"
+                placeholder="Signup Password" required>
+            <div id="checkbox">
+                <input type="checkbox" onclick="showPassword()" name="check" id="check">
+                <label for="check">&nbsp; Show Password</label>
+            </div>
+            <input type="submit" id="submit" value="Submit" onclick="CheckPassword(document.signin.password)" onclick="">
+        </form>
+    </div>
+    <!-- Password Rules  -->
+    <!-- <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div> -->
+      <!-- SignUp Form  -->
+    <div class="form1">
+        <form action="">
+            <h1>Login</h1>
+            <label for="">Username</label>
+            <input type="text" placeholder="Login User" id="loginUser" required>
+            <label for="">Email</label>
+            <input type="email" name="email" id="loginEmail" placeholder="Enter your valid email" required>
+            <label for="">Password</label>
+            <input type="password" placeholder="Login Password" id="loginPass" required>
+
+            <input type="submit" id="login" value="Submit">
+
+        </form>
+    </div>
+
+    <div id="myAlert" class="alert alert-danger collapse">
+        <a href="#" class="close" id="linkClose">&times;</a>
+        there is a problem in submitting your form
+    </div>
+
+</body>
+
+
+
+<script>
+
+
+
+    // Saving data in Local Storage 
+    document.querySelector("#submit").addEventListener("click", () => {
+
+
+        var userName = document.getElementById("name").value;
+        var pass = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+
+
+        // console.log(userName + " " + pass + " "+ email);
+        localStorage.setItem("UserName", userName);
+        localStorage.setItem("Password", pass);
+        localStorage.setItem("Email", email);
+
+
+    })
+
+
+    // Showing Password 
+    function showPassword() {
+        var pass = document.getElementById("password");
+        if (pass.type === "password") {
+            pass.type = "text";
+        } else {
+            pass.type = "password";
+        }
+    }
+
+    /*  function showPassword() {
+          // console.log("Hello" +document.getElementById("password").value)
+          var passwrd = document.getElementById("password").value;
+          localStorage.getItem(passwrd);
+          document.getElementById("password").setAttribute("type", "text");
+      }*/
+
+    // Login Credential 
+    document.querySelector("#login").addEventListener("click", () => {
+
+        // Getting value from user 
+        let loginPass = document.getElementById("loginPass").value;
+        let loginUser = document.getElementById("loginUser").value;
+        let loginEmail = document.getElementById("loginEmail").value;
+
+        // retrive data in a variable 
+        let localPass = localStorage.getItem("Password");
+        let localUser = localStorage.getItem("UserName");
+        let localEmail = localStorage.getItem("Email");
+        // console.log(localEmail)
+
+        // Matching Credential
+        if (loginPass == localPass && loginUser == localUser && loginEmail == localEmail) {
+
+            document.write(`<h1>  Welcome ${localUser} </h1> `)
+
+        } else {
+            alert("Incorrect Credential")
+        }
+    })
+
+
+
+    // function CheckPassword(inputtxt) {
+    //     var passw = /^[A-Za-z]\w{7,14}$/;
+    //     if (inputtxt.value.match(passw)) {
+    //         alert('You have successfully signed up')
+    //         return true;
+    //     }
+    //     else {
+    //         alert('Wrong...!\n Please match the criteria')
+    //         return false;
+    //     }
+    // }
+
+  
+    function CheckEmail(inputemail) {
+        var email = /[a-z0-9]{3,}@[a-z]{4,}.[a-z]{2,}/;
+        if (inputemail.value.match(email)) {
+            alert("email is ok")
+            return true;
+        } else {
+            alert("invalid email")
+            return false;
+        }
+    }
+
+</script>
+
+</html>

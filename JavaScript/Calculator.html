@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    .container {
+        margin: auto;
+        /* align-items: center; */
+        width: 450px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 20px;
+
+    }
+
+    .line {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .n {
+        margin: 20px 5px;
+        font-size: 1.2em;
+        color: #fff;
+        border-radius: 50%;
+
+        padding: 25px;
+        cursor: pointer;
+        background-color: rgb(92, 91, 88);
+    }
+
+    .n:hover {
+        background-color: rgb(145, 144, 142);
+    }
+
+    #result {
+        border: 2px solid black;
+        height: 100px;
+        resize: none;
+        border-radius: 5px;
+        background-color: #fff;
+        outline: 3px solid rgb(132, 129, 129);
+        color: #000;
+        font-size: 30px;
+    }
+
+    .op {
+        background-color: orange;
+    }
+
+    .op:hover {
+        background-color: rgb(233, 177, 75);
+    }
+
+    /* .n0{
+        min-width: 100px;
+        padding: 25px 30px;
+        
+    } */
+</style>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <!-- <textarea name="" id="result" cols="30" rows="10"></textarea> -->
+        <div id="result"></div>
+        <div class="line">
+            <p class="nc n">C</p>
+            <p class="n">M</p>
+            <p class="nper n">%</p>
+            <p class="ndiv n op">/</p>
+        </div>
+        <div class="line">
+            <p class="n7 n">7</p>
+            <p class="n8 n">8</p>
+            <p class="n9 n">9</p>
+            <p class="nmul n op">*</p>
+        </div>
+        <div class="line">
+            <p class="n4 n">4</p>
+            <p class="n5 n">5</p>
+            <p class="n6 n">6</p>
+            <p class="nmin n op">-</p>
+        </div>
+        <div class="line">
+            <p class="n1 n">1</p>
+            <p class="n2 n">2</p>
+            <p class="n3 n">3</p>
+            <p class="nadd n op">+</p>
+        </div>
+        <div class="line">
+            <p class="n0 n">0</p>
+            <p class="ndot n">.</p>
+            <p class="neq n op">=</p>
+        </div>
+        <!-- <div class="line4"></div> -->
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".n").click(function () {
+                
+            })
+            // $("result").text() = value; 
+        })
+
+
+    </script>
+</body>
+
+</html>

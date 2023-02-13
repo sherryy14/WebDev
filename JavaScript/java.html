@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="product-details.js"></script>
+
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <p id="para"><i class="fa-regular fa-address-book"></i></p>
+
+
+    <!-- <button onclick="eventx()">Click</button> -->
+    <!-- <p onmouseenter="eventx()">Lorem ipsum dolor sit amet.</p> -->
+    <!-- <p onmousedown="eventx()">Lorem ipsum dolor sit amet.</p> -->
+    <!-- <p onresize="eventx()">Lorem ipsum dolor sit amet.</p> -->
+    <!-- <p onmouseout="eventx()">Lorem ipsum dolor sit amet.</p> -->
+    <br>
+    <input type="button" value="Current Date/Time" onclick="get_date()">
+    <br><br>
+    <input type="button" value="Future Date" onclick="future_date()">
+    <script src="date.js"></script>
+    <br><br>
+
+  
+</body>
+<script>
+    
+    // var fname, lname, age;
+    // fname = "Muhammad"
+    // lname = "Shahryar"
+    // age = "20"
+
+    // document.write("My first name is "+ fname + " and my last name is "+ lname + ". I am " + age + " years old <br>")
+
+    /* Data types 
+     var a = "Hello";
+     var b = 54;
+     var c = true;
+     var d = [2,4,56,7,8];
+     var e = {
+         fname : "M", lname : "S", age : "34"
+     }
+     var f = undefined;
+     var g = null;
+   
+     document.write(a)
+     document.write("<br>")
+     document.write(typeof a) */
+
+
+    /*   //    Events 
+       confirm()
+       var num1 , num2, num;
+       num1 = 2;
+       num2 = 7;
+       // num1 = parseInt(prompt("enter first number"));
+       // num2 = parseInt(prompt("enter second number"));
+       num = eval(num1 ** num2);
+   
+       document.write("Addtion of "+ num1 + " and "+ num2+ " = " + num);
+      */
+
+    /*  //    Console error and warn 
+        console.time();
+       var d = [2,4,56,7,8];
+        console.log(d);
+        console.timeEnd(); */
+
+    /*
+    var a = 4;
+    
+    document.write(isNaN(a));
+    */
+
+    /*   // Assignment operator 
+       var a = 5;
+       var b = 3;
+       var a = a += b;
+    
+       document.write(a); */
+
+    // Relational Operator 
+
+    // var a = 5;
+    // var b = 5;
+    // var c = (a==b)
+
+    // document.write(c);
+
+    /*  function hey(){
+          document.write("hello world <br>");
+      }
+
+      hey();
+      function hello(fname = "Sherry", lname = "Smith"){
+          document.write("My first name is "+ fname + " and " + " my last name is " + lname);
+
+       }
+
+      hello("Harry","Potter"); */
+
+    /*       function hi(fname = "Sherry", lname = "Smith"){
+              var a = fname + " " + lname;
+                return a;
+            }
+    
+            var b = hi("<br>Harrry" , "Pottterrr");
+            document.write(b); */
+
+
+    /*      function sub(eng,math,phy,eng,comp,chem,urdu){
+              var s = eng + math + phy + comp + chem + urdu;
+              return s;
+          }
+  
+          document.write("<br>");
+          var total = sub(85,96,87,65,98,65,75);
+          document.write("Obtained Marks = "+ total);
+  
+          function per(total_marks){
+              var p = total_marks/700*100;
+              return p;
+          }
+  
+          var percentage = parseInt(per(total));
+          document.write("<br> Your percentage " +  percentage + "%"); */
+
+    /* var a = 1;
+     document.write("<ol>");
+
+     while(a<=10){
+         document.write("<li>Hey, you okay? </li>");
+         // a++;
+         // a = a-1;
+         // a++;
+         a = a+1;
+
+     }
+     document.write("</ol>");*/
+    // function eventx(){
+    //     alert("Hello World");
+    // }
+
+    // var a = prompt("Write something....","Hello");
+    // alert(a)
+
+    // ------------- Array ---------------
+    /* var names = ["Arsal","Ali","Kamran","Roohan","Furqan"];
+     document.write("<ol>");
+     for(var i=0; i<=4;i++){
+         document.write("<li>My name is "+ names[i]+"</li>");
+
+     }
+  
+     document.write("</ol>");*/
+    // --------------- New Array -------------------
+    // var data = new Array();
+
+    // Object.freeze(data);
+
+
+    // data[0] = "Smith";
+    // data[1] = 25;
+    // data[2] = "Admin";
+    // data[3] = "$2000";
+
+    /*   for(var i=0; i<data.length; i++){
+           document.write(data[i]);
+
+       }*/
+    // document.write(data);
+
+    // User Input Array ----------------------
+    /* var arry= new Array();
+
+     for(var i=0; i<=4;i++){
+         arry[i] = prompt("Enter Values");
+         document.write(arry[i]+"<br>");
+     }
+     */
+
+    //Right Triangle
+
+    /* var a,b;
+
+    for(a=1; a<=5; a++){
+         for(b=1; b<a;b++){
+             document.write("*");
+         }
+             document.write("<br>");
+
+    } */
+
+    // Number right triangle
+    /*var a,b;
+
+    for(a=1; a<=5; a++){
+         for(b=1; b<=a ;b++){
+             document.write(b);
+         }
+             document.write("<br>");
+
+    } */
+
+
+    /*       for(var a=1;a<=5;a++){
+                for(var b=1;b<=5;b++){
+                document.write(b+" ");
+            }
+                document.write("<br />");
+            } */
+
+
+    // star pattern book 
+    /*    var i, j, k;
+        for(i=1; i<=5; i++)
+        {
+            for(j=i; j<5; j++)
+            document.write("&nbsp;&nbsp;");
+            for(k=1; k<i*2; k++)
+            document.write("*");
+            document.write("<br>");
+        } */
+
+
+    // var a=1;
+    // document.write(a+=1);
+    // document.write(a=a+1);
+    // document.write(a++);
+    // document.write(a);
+
+    //--------------Arrays-----------------------
+
+
+    /*   var colors = new Array('red','green','blue','black');
+
+       document.write("<b>Check index number by calling string</b><br>");
+       document.write(colors.indexOf('red')) // checking index number
+       document.write("<br>");
+       colors[4] = "gray"
+       document.write("<br>");
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       // ----------------Methods Using Array-----------------------
+       document.write("<b>Push Method</b><br>");
+       colors.push("yellow")   // add value at the last of an array
+
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Pop Method</b><br>");
+       colors.pop()    // removes value at the last of an array
+
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Unshift Method</b><br>");
+       colors.unshift("orange");   // add value at the beginning of an array
+
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+     
+       document.write("<b>Shift Method</b><br>");
+       colors.shift();     // removes value at the beginning of an array
+
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Add value at a particular index</b><br>");
+       colors[5]= 'pink'; // add a color at a particular index
+       
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Join Method</b><br>");
+       var b = colors.join(" "); // Add delimiter or a string b/w array
+       document.write("Colors name join: (" + b + ")<br>");
+
+       var new_colors = [' purple', 'dark blue', 'brown'];
+
+       document.write("<b>Concat Method</b><br>");
+       var a = colors.concat(new_colors); // Join two or more array
+
+       document.write("Colors name: (" + a + ") and lenght of array is " + a.length+ "<br>");
+
+       document.write("<b>Sort Method</b><br>");
+       colors.sort(); //Arranging in ascending order
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Slice Method</b><br>");
+      var colors = colors.slice(1,4);
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Adding more values at a particular index</b><br>");
+       colors[3] = 'white';
+       colors[4] = 'silver';
+       colors[5] = 'orange';
+
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Delete Method</b><br>");
+       delete colors[3];
+      
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");
+
+       document.write("<b>Splice Method</b><br>");
+       colors.splice(2,2,'new color', 'new colors')
+       document.write("Colors name: (" + colors + ") and lenght of array is " + colors.length+ "<br>");*/
+
+
+    /*  var multiarray = [["David",34,"HR", 2000],["Smith",24,"Admin",1600],["Sarah",29,"IT",1900]]
+
+      // document.write(multiarray);
+      // document.write("<br>");
+      // document.write(multiarray[0][2]);
+      document.write("<table border=1><tr><th>Name</th><th>Age</th><th>Dept</th><th>Salary</th></tr>");
+
+      for(var i=0; i<multiarray.length;i++){
+
+          document.write("<tr>");
+          // document.write( i +". Mr. / Miss. "+ multiarray[i][0]+"</th>");
+
+          for(var j=0; j<multiarray[i].length ; j++){
+          
+         
+              document.write("<td>"+multiarray[i][j]+"</td>")    
+          }
+          document.write("</tr>");
+          
+         
+      }
+      document.write("</table>");
+
+      var a=3;
+      try {
+              document.write(a0);
+}
+      catch(err) {
+              document.write("Not Divisible");
+      }
+
+      document.write("<br><br><br>");
+
+      for(var k in multiarray){
+          console.log("<br>"+ multiarray[k]+ "<br>")
+      }
+
+      console.table(multiarray); */
+
+    // for(var k = 0;k<=2;k++){
+    //     document.write("Employee Name: " +multiarray[k][0]+"<br>");
+    // }
+
+
+    /*     var emp1 = ['Kashan','IT',20,'USA']
+         var emp2 = ['Ali','Developer',27,'Pakistan']
+         var emp3 = ['Kashif','SRO',22,'Dubai']
+         var emp4 = ['Sherry','Admin',38,'AUS']
+         var emp5 = ['Hamza','HR',40,'UK']
+ 
+         var employee_data = [emp1, emp2,emp3,emp4,emp5]
+ 
+         document.write(employee_data);
+ 
+         var employee_info = [
+             ['Kashan','IT',20,'USA'],   //index 0
+             ['Ali','Developer',27,'Pakistan'], //index 1
+             ['Kashif','SRO',22,'Dubai'], //index 2
+             ['Sherry','Admin',38,'AUS'], //index 3
+             ['Hamza','HR',40,'UK'],
+             ['Athar','Manager',32,'Tokyo']] //index 4
+ 
+         document.write('<br>');
+         document.write(employee_info);
+         document.write('<br>');
+         document.write(employee_info[0][1]);
+         document.write('<br>');
+         document.write('<br>');
+         employee_info.push('Athar','Manager',32,'Tokyo')
+         document.write(employee_info+ "<br>"); */
+
+
+    /*    var employee_info = [
+            ['Kashan','IT',20,'USA'],   //index 0
+            ['Ali','Developer',27,'Pakistan'], //index 1
+            ['Kashif','SRO',22,'Dubai'], //index 2
+            ['Sherry','Admin',38,'AUS'], //index 3
+            ['Hamza','HR',40,'UK'],
+            ['Athar','Manager',32,'Tokyo']] //index 4
+        document.write('<ul>')
+        for(var i=0; i<employee_info.length;i++){
+            document.write("Employee Data: "+ employee_info[i] + "<br><br>");
+                for(var j=0; j<employee_info[i].length; j++ ){
+                    document.write('<li>' +employee_info[i][j] +'</li>')
+                }
+   document.write('<br>')
+      }
+        document.write('</ul>')*/
+
+
+
+    // ------------Functions---------------
+
+    /*       function what(){
+               document.write("Hey!");
+           }
+   
+           // what();
+   
+           function add(){
+               var a=2;
+               var b=3;
+               document.write(a+b);
+           }
+           document.write('<br>');
+           
+           // add();
+   
+           function mul(a,b){
+               var multi = a**b;
+               document.write(multi);
+           }
+           mul(2,3);
+           mul(2,4);
+           mul(4,4); */
+
+    // ------------Parameterized Functions---------------
+
+    /*       function square(num,power){
+               var num = prompt("Enter a number");
+               var power = prompt("Enter a power");
+               document.write('Square of '+num+' is '+num**power);
+           }
+           document.write('<br>');
+           // square();
+   
+           // ------------ Return Function------------            
+   
+           function result(math,eng,phy,chem,urdu){
+               // var math= parseInt(prompt("Enter marks"));
+               // var eng= parseInt(prompt("Enter marks"));
+               // var phy= parseInt(prompt("Enter marks"));
+               // var chem= parseInt(prompt("Enter marks"));
+               // var urdu= parseInt(prompt("Enter marks"));
+               
+               var total =math+eng+phy+chem+urdu;
+               var per = total/500*100;
+               return per
+           }
+   
+           var b = result(34,65,44,12,86)
+           document.write("Your grade is " +b+"%");
+   
+   */
+
+
+
+    /*   var info = {
+               fname : "Haris",
+               lname : "Rauf",
+               age : 24,
+               bowling : "Right Arm Fast",
+               country : "Pakistan",
+               bff : ['babar','shadab','rashid','hasnain'],
+               speed : {
+                   slowest : "138Km/h",
+                   average : "145Km/h",
+                   fastest : "159Km/h"
+               },
+               fullname : function(){
+                   return this.fname + " " + this.lname;
+               }
+           }
+   
+   
+           console.log(info)
+           document.write("<b>Bowler Name: </b>" +info.fname +"<br><b> Bowling action: </b>" + info.bowling.toUpperCase() + "<br><b> Best Friend: </b>" + info.bff[0]+"<br><b> Fastest Delivery: </b>" + info.speed.fastest )
+   */
+
+    /*    document.write('<br>')
+
+
+    
+const Manager = {
+name: "John",
+age: 27,
+job: "Software Engineer"
+}
+const Intern = {
+name: "Ben",
+age: 21,
+job: "Software Engineer Intern"
+}
+
+function sayHi() {
+document.write(`Hello, my name is ${this.name}`)
+}
+
+Manager.sayHi = sayHi;
+Intern.sayHi = sayHi;
+
+Manager.sayHi();
+document.write('<br>')
+Intern.sayHi();
+document.write('<br>')
+
+// -------------------------
+
+var players = new Object();
+
+players.name1 = "Phil Salt";
+players.name2 = "Alex Hales";
+players.name3 = "Brook";
+players.name4 = "Ben Duckett";
+players.name5 = "Moin Ali";
+players.name6 = "David Willey";
+players.name7 = "Rashid Ali";
+players.name8 = "Sam Curran";
+
+document.write( `Order 8th batsman: ${players.name8} <br> Order 5th Batsman: ${players.name5}`);
+document.write('<br>')
+document.write("Order 8th batsman: " +players.name8); */
+
+/*
+  function Obj(name, contact, gender) {
+        this.name = name;
+        this.contact = contact;
+        this.gender = gender;
+    }
+
+    let abc = new Obj("Hassan", "031254698", "Male")
+    console.log(abc.name)
+
+
+    let def = new Obj("Shehryar", "01236", "Male") 
+
+    function Car(model, brand, color, year){
+        this.model = model;
+        this.brand = brand;
+        this.color = color;
+        this.year = year;
+    }
+    Car.prototype.price = "$20000"
+    var car = new Car("Civic X", "Honda","White",2022)
+    var car1 = new Car("Corola", "Honda Reborn","Black",2020)
+
+    document.write(car.model)
+    document.write("<br>")
+    document.write(car1.model)
+    document.write("<br>")
+    document.write(car.price) 
+    document.write("<br>")
+    document.write(car1.price) */
+
+    // -------------------- For in Loop ---------------------- 
+
+  /*  var Manager = {
+        Age: 27,
+        Name: "John",
+        Job: "Software Engineer"
+        }
+
+
+    for(var i in Manager){
+        document.write(i + ": " + Manager[i] + "<br>")
+    }
+ 
+    for( var prty in Manager){
+        document.write(prty +": " + Manager[prty] + "<br>");
+    } */
+
+    // --------------------- For Each Loop --------------------
+
+
+    
+
+    
+
+
+
+    // var abc = prompt("enter")
+    // document.write("<br>"+abc.toLowerCase());
+
+    // -----------------------Text Strings --------------
+
+ 
+            // var strng = new String("Aptech Learning is a learning institute");
+            // document.write(strng.charAt(7));
+            // document.write("<br>")
+            // document.write(strng.concat(" Unleash Your Potential"))
+            // document.write("<br>")
+            // document.write(strng.indexOf("A"));
+            // document.write("<br>")
+            // document.write(strng.search("Learning"));
+            // document.write("<br>")
+            // document.write(strng.replace("Aptech","iPecht"));
+            // document.write("<br>")
+            // document.write(strng.search("Aptech"));
+            // document.write("<br>")
+            // document.write(strng.match(/learning/ig));
+            // document.write("<br>")
+            // document.write(strng.charCodeAt(0));
+            // document.write("<br>")
+            // document.write(String.fromCharCode(97));
+            // document.write("<br>")
+            // document.write(strng.substring(0,4));
+            // document.write("<br>")
+            // alert(strng.trim());
+            // document.write("<br>")
+            // var a = strng.split(" ")
+            // document.write(a);
+            // document.write("<br>")
+            // document.write(a[5]);
+
+// ------------- Math Object ---------------
+
+    /*    var a = 4;
+ 
+         var pwr = Math.pow(a,2)
+         document.write("<br>")
+         document.write("Square : " +pwr)
+         document.write("<br>")
+         var sqt = Math.sqrt(a)
+         document.write("Square Root : " +sqt)
+         document.write("<br>")
+         var ran = Math.random()
+         document.write("Random Number : " +ran*10)
+         document.write("<br>")
+         document.write("Floor : " + Math.floor(5.9))
+         document.write("<br>")
+         document.write("Ceil : " + Math.ceil(5.9))
+         document.write("<br>")
+         document.write("Truncate : " + Math.trunc(3.3))
+         document.write("<br>")
+         document.write("Round : " + Math.round(4.4))
+         document.write("<br>")
+         document.write("Absolute : " + Math.abs(-5.9))
+         document.write("<br>")
+         document.write("Sin : " + Math.sin(0))
+         document.write("<br>")
+         document.write("Cos : " + Math.cos(1))
+         document.write("<br>")
+         document.write("Logarithm : " + Math.log(1))
+ 
+         document.write("<br>")
+         document.write("<br>")
+         document.write("<br>")
+         document.write("<br>")
+ */
+
+    // var date1 = new Date();
+    // date1.setFullYear(3000)
+
+    // // document.write(date);
+    // document.write('<br>');
+    // document.write(date1.toDateString());
+    // document.write('<br>');
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // document.write(JSON.stringify(abc))
+
+
+    // document.querySelector(".item").innerHTML = JSON.stringify(abc)
+
+
+    // function get_date(){
+    //     var today = new Date();
+    //     var month = today.getMonth();
+    //     month++;
+    //     var date = today.getDate();
+    //     var fullyear = today.getFullYear();
+    //     alert("Today's date: "+ month + '/'+ date + '/'+ fullyear )
+
+    // }
+
+
+
+
+//     function future_date(f_year,f_month,f_date){
+//     var future = new Date();
+//     var f_year = prompt("Enter year")
+//     var f_month = prompt("Enter month")
+//     f_month++;
+//     var f_date = prompt("Enter date")
+//     f_date= f_date+2;
+//     future.setFullYear(f_year,f_month,f_date);
+//     alert(future.toDateString())
+// }
+
+
+
+
+
+//-------------------------- Arrow Function -------------------------------
+/*
+function abc(name){
+    document.write("Hello to "+name);
+}
+abc('sherry');
+
+var ab = (names,age) => { 
+    alert("Hello to "+ names+age); 
+    
+}
+ab("Sherry",46) */
+
+
+
+
+
+/*   var empp = '{ "firstName":"John", "lastName":"Joe" }'
+
+    var txt = JSON.parse(empp)
+
+    console.log(txt.firstName) */
+
+
+
+
+  let myPromise = new Promise((esolve , reject)=>{
+
+
+var a =3;
+
+if(a>=5){
+
+esolve() 
+
+}else{
+  reject();  
+}
+
+}
+
+)
+
+
+myPromise.then(()=>{
+    console.log("Success");
+}).catch(()=>console.log("Error")) 
+
+myPromise.finally(()=> console.log("Done"))
+
+    let promisefn = new Promise((resolve, reject)=>{
+        var a=5;
+
+        if(a==5){
+            resolve()
+        }else{
+            reject()
+        }
+    }
+    )
+    promisefn.then(()=>{
+        console.log("Hogya")
+    }).catch(()=>{
+        console.log("Nhi")
+    })
+ 
+//  var Product = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+
+
+/*    const obj = {name: "John", age: 30, city: "New York"};
+    const myJSON = JSON.stringify(obj);
+
+    var parsed = JSON.parse(myJSON)
+
+    console.log(parsed.city);
+*/
+
+var myProduct = { product1 : {
+    "id": 1,
+    "title": "iPhone X",
+    "description":"An apple mobile which is nothing like apple",
+    "price": 549,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "...",
+    "images": ["...", "...", "..."]
+        },
+            product2: {
+    "id": 2,
+    "title": "iPhone 12",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 786,
+    "discountPercentage": 10.96,
+    "rating":4.98,
+    "stock": 194,
+    "brand": "Apple",
+    "category":"smartphones",
+    "thumbnail": "...",
+    "images": ["...", "...", "..."]
+            }
+        };
+
+        console.log(JSON.stringify(myProduct))
+        console.log(myProduct)
+
+
+    document.write(myProducts.product1.images)
+
+    
+
+
+    // var mydata = JSON.stringify(Product);
+    // var mydata = JSON.stringify(Product);
+
+    // console.log(mydata)
+
+        function fn(){
+            let host1 = location.host;
+            let href1 = location.href;
+            let pathn = location.pathname;
+            let prot = location.protocol;
+            alert(host1 + "\n" + href1 + "\n" + pathn+ "\n" + prot)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //    new RegExp /^[A-za-z0-9+_.-]+@[a-z]{3,9}+.[a-z]{2,6}/
+    //  +13-434-34233
+</script>
+<button onclick="fn()">On CLick</button>
+</html>

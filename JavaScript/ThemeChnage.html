@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-size: 62.5%;
+    }
+    /* ----------------Header Styling ------------------ */
+    #header{
+        width: 100%;
+        height: 170px;
+        background-color: burlywood;
+        border: 2px solid burlywood;
+        box-shadow: 5px 0 6px 4px gray;
+  
+    }
+    #heading{
+        font-size: 1rem;
+        text-align: center;
+        background-color: rgb(229, 197, 155);
+        color: gray;
+    }
+  
+    nav ul{
+        margin-right: 50px;
+        float: right;
+        display: flex;
+     
+        list-style: none;
+    }
+    .logo{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        float: left;
+        cursor: pointer;
+    }
+    nav ul li{
+        
+        margin: 5px 10px;
+        padding: 5px 10px;
+        background-color: rgb(229, 197, 155);
+        border: 2px solid rgb(129, 101, 64);
+        border-radius: 10px;
+    
+    }
+    nav a{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    /* --------------------Section Styling ---------------- */
+    section{
+        margin-top: 5px;
+        display: flex;
+        height: 400px;
+    }
+    .main-section{
+        width: 80%;
+        background-color: whitesmoke;
+        box-shadow: 5px 0 6px 4px gray;
+    }
+    .main-section p{
+        font-size: 2em;
+        text-align: justify;
+        margin: 10px;
+        /* padding: 0; */
+    }
+    .main-section img{
+        border-radius: 10px;
+        margin: 10px 20px;
+        float: left;
+    }
+    #myflower, #mytext, label{
+        font-size: 15px;
+        margin-top: 30px;
+    }   
+    /* ------------------- Side Bar --------------- */
+    .side-bar{
+        width: 20%;
+        background-color: wheat;
+        box-shadow: 5px 0 6px 1px rgb(56, 50, 50);
+    }
+   
+    .side-bar ul li{
+        list-style: none;
+        margin: 30px 10px;
+    }
+    .side-bar ul li a{
+        /* border: 2px solid red;
+        background-color: thistle; */
+        background-color: rgb(229, 197, 155);
+        border: 2px solid rgb(129, 101, 64);
+        border-radius: 10px;
+        text-decoration: none;
+        color: chocolate;
+        font-size: 20px;
+        padding: 5px 8px;
+        margin-left: 10px;  
+    }
+
+
+</style>
+<body>
+    <header id="header">
+        <div id="heading"><h1>Flowerr</h1></div>
+        <nav>
+            <div class="logo">
+                <img src="logo1.png" alt="" width="200px" height="180px">
+            </div>
+            <ul>
+                <li id="head-btn1"><a href="#">Home</a></li id="head-btn">
+                <li id="head-btn2"><a href="#">About Us</a></li>
+                <li id="head-btn3"><a href="#">Gallery</a></li>
+                <li id="head-btn4"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+
+        <div class="main-section">
+            <img id="myflower" src="sunflower.jpg" alt="sunflower" width="200px" height="200px">
+
+            <label><b>Flower Name: </b></label>
+            <input type="text" id="mytext" value="Sun Flower" readonly>
+            <input type="button" value="Change Image" onclick="image()">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tenetur vero ducimus dicta quasi expedita illo nostrum soluta architecto pariatur exercitationem laboriosam porro voluptatum dolore blanditiis velit, quae mollitia et magni! Labore necessitatibus delectus quae explicabo vel vitae deserunt laboriosam. Tempore natus vel iste recusandae vero ut non porro necessitatibus quidem ratione impedit distinctio quo alias, molestiae fugit magnam animi numquam nisi quaerat, accusamus facere. Facere deserunt voluptates neque quam cumque. Quae unde obcaecati soluta fugit? Corrupti harum nostrum veniam fugiat ratione mollitia beatae eligendi esse consequatur eum odio doloribus, possimus dolores saepe totam dolorum consequuntur sapiente provident amet. Sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime sint itaque asperiores dolores veritatis ex similique, officiis nostrum voluptatum voluptate ut, aspernatur quos odit illo iste a corporis beatae. Blanditiis qui, optio provident aperiam minus veniam excepturi similique voluptas ab fuga illo odit ea repellendus ut perferendis assumenda nisi incidunt quam et veritatis laudantium nemo officiis tenetur.</p>
+        </div>
+        <aside class="side-bar">
+            <ul>
+                <li><i class="fa fa-angle-double-right" style="font-size:20px"></i><a href="#"></i> Home</a></li>
+                <li><i class="fa fa-angle-double-right" style="font-size:20px"></i><a href="#">About Us</a></li>
+                <li><i class="fa fa-angle-double-right" style="font-size:20px"></i><a href="#">Gallery</a></li>
+                <li><i class="fa fa-angle-double-right" style="font-size:20px"></i><a href="#">Contact</a></li>
+            </ul>
+        </aside>
+    </section>
+
+
+
+
+    <script src="ThemeChange.js"></script>
+</body>
+</html>

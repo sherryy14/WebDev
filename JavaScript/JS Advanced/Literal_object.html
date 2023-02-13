@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css" content="text/plain"> -->
+</head>
+<body>
+    <h1>Literal Object</h1>
+
+    <script>
+        let name = "Sherry"
+        let org = "Aptech"
+        // Old method 
+        const obj1 = {
+            name: name,
+            org : org
+        }
+        console.log(obj1)
+
+
+        // New Method "Literal Object"
+        let fullname = "Sherry"
+        let orgn = "Aptech"
+        const obj2 = {
+            fullname,
+            orgn
+        }
+        console.log(obj2)
+
+        // Literal Object : Using variable as a property name
+
+        let n = "name"
+        const obj3 = {
+            [n] : "Shahryar",
+            // Changing property name by concatination
+            ["full"+n] : "Roohan"
+        }
+        console.log(obj3)
+        // console.log(obj3.name)
+
+        // Adding function in an object 
+        let k = "employee"
+        const obj4 = {
+            [k + "id"] : "A01",
+            [k+"name"] : "Roohan",
+            details : function(){
+                return `Employee ${this.employeename} having ID ${this.employeeid} is being promoted to General Manager.`
+            }
+        }
+        console.log(obj4.details())
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="fname">
+    <button id="btn" onclick="formData()">Sign Up</button>
+
+    <input type="text" id="signInfname">
+    <button id="btn" onclick="SignData()">Sign In</button>
+    <script>
+        function formData(){
+            let fullName = fname.value
+            localStorage.setItem("firstName",fullName)
+
+
+        }
+
+        function SignData(){
+            let getName = localStorage.getItem('firstName')
+            let userInp = signInfname.value
+            if(getName == userInp){
+                alert("Succesfull")
+            }else{
+                alert("Failed")
+
+            }
+
+
+            // alert(getName)
+        }
+
+
+        // document.getElementById 
+
+
+
+
+
+        if(window.sessionStorage){
+            console.log("Supported")
+        }else{
+            console.log("Not Supported")
+
+        }
+
+
+        // var name = "Sherry"; 
+        // // Or 
+        // // var name = prompt("Please enter your good name: ")
+
+        // // Setitem is used to save/set value into storage 
+        // localStorage.setItem("FullName",name)
+
+        // // GetItem is used to retrive value from storage 
+        // var getname = localStorage.getItem("FullName")
+        // console.log(getname)
+
+        // localStorage.removeItem("FullName")
+
+        // localStorage.clear()
+
+
+
+        // let username = 'ABC'
+
+        // localStorage.setItem("uname",username)
+
+        // let getuname = localStorage.getItem('uname')
+        // console.log(getuname)
+
+
+
+
+    </script>
+</body>
+</html>

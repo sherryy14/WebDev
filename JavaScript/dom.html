@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOm</title>
+</head>
+
+<body>
+    
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae fuga voluptates sit! Architecto dolores a tempore <i> labore </i> explicabo, autem fugit aliquam aliquid, numquam molestiae eius adipisci officiis. Qui, nostrum!
+    <span> Hello</span> <b>1</b>
+    </p>
+
+
+    <p class="myPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vitae fuga voluptates sit! Architecto dolores a tempore <b> labore </b> explicabo, autem fugit aliquam aliquid, numquam molestiae eius adipisci officiis. Qui, nostrum!
+    <span> Woww</span> <b>2</b>
+    </p>
+
+    <p id="demo">Lorem ipsum <span>dolor</span> sit, amet consectetur adipisicing elit. Fugiat, quis? <b>3</b></p>
+
+    <p>-----------------------------------------------------------------------</p>
+
+    <p id="fulltext"></p>
+    <p id="wndow"></p>
+
+</body>
+<style>
+
+    .myPara {
+        border: 2px solid red;
+        background-color: burlywood;
+    }
+
+</style>
+<script>
+    var element = document.getElementById("para").innerHTML;
+    console.log(element)
+    var element1 = document.getElementsByClassName("myPara")[0].innerHTML;
+    console.log(element1)
+    var element2 = document.getElementsByTagName("p")[2].innerHTML;
+    console.log(element2)
+
+    var fulltext = document.getElementById('fulltext').innerHTML = element + " AND " + element1 + " AND " + element2;
+
+    var mazeedtext = document.getElementById('fulltext').innerHTML =  fulltext + " Mazeed text add krna hai";
+
+    var wndow = document.getElementById('wndow').innerHTML = "Window Size Width and Height: " + window.innerWidth + " x " + screen.availHeight;
+
+
+    
+
+
+
+
+
+// var library = [ 
+//     {
+//         title: 'Bill Gates',
+//         author: 'The Road Ahead',
+//         readingStatus: true
+//     },
+//     {
+//         title: 'Steve Jobs',
+//         author: 'Walter Isaacson',
+//         readingStatus: true
+//     },
+//     {
+//         title: 'Mockingjay: The Final Book of The Hunger Games',
+//         author: 'Suzanne Collins',
+//         readingStatus: false
+//     }];
+
+// for (var i = 0; i < library.length; i++) 
+//    {
+//     var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+//     if (library[i].readingStatus) {
+//       console.log("Already read " + book);
+//     } else
+//     {
+//      console.log("You still need to read " + book);
+//     }
+//    }
+
+    // console.log(document.links);
+
+    // document.getElementById("para").innerHTML = "ABC"
+    // console.log(document.querySelectorAll(".para").innerHTML);
+    // console.log(document.getElementById(".para").innerHTML);
+
+    // let element = document.querySelectorAll(".para");
+    // element.forEach(element => element.classList.add('mtPara'));
+
+
+    // let myFunc = () => console.log(element);
+
+    // myFunc()
+
+    // var a =3;
+    //  a = 5;
+    // document.write(a)
+    // let b = 6;
+    // b = 7;
+    // document.write(b)
+    
+
+    // const c = 1;
+    // c=5;
+    // document.write(c)
+</script>
+
+</html>

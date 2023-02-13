@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #map {
+        height: 80vh;
+        width: 80vw;
+        margin: auto  ;
+        border: 2px solid green;
+        box-shadow: 2px 0 9px 6px black;
+    }
+
+   
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h1>Geolocation</h1>
+    <div id="map"></div>
+
+
+    <script>
+        let map;
+
+        function initMap() {
+            var aptech = { lat: 24.92734, lng: 67.0331 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: aptech ,
+                zoom: 20,
+                // mapTypeId: google.maps.mapTypeId.satellite
+            });
+            const marker = new google.maps.Marker({
+                position:  aptech ,
+                map : map,
+                label: "A",
+                title: "Aptech Learning Institute",
+                draggable: false,
+                animation: google.maps.Animation.DROP
+                // icon: 'mapicon.png'
+                
+            });
+            // const infowindow = new google.maps.InfoWindow({
+            //     content: "<p>Aptech</p>"
+            // });
+            // window.open(map,marker)
+        }   
+
+        window.initMap = initMap;
+
+    </script>
+
+
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA
+&callback=initMap"> </script>
+
+</body>
+
+
+</html>

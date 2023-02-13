@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+</head>
+<style>
+#map{
+    border: 2px solid black;
+    width: 80%;
+    height: 400px;
+    margin: 10px auto;
+
+}
+
+</style>
+
+<body>
+
+    <h1>Geolocation API</h1>
+    <div id="map"></div>
+
+
+    <script>
+        let map;
+       
+        function initMap() {
+            var location_1 = { lat: 24.9288488, lng: 67.034556 }
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: location_1,
+                zoom: 20,
+            });
+            const marker = new google.maps.Marker({
+                position:  location_1 ,
+                map : map,
+                label: "A",
+                title: "Aptech Learning Institute",
+                draggable: false,
+                animation: google.maps.Animation.DROP
+                // icon: 'mapicon.png'
+                
+            });
+        }
+
+        window.initMap = initMap;
+    </script>
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14471.068625301734!2d67.0508329!3d24.9400009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xde052383a6a90935!2sPizza%20Max%20-%20North%20Nazimabad!5e0!3m2!1sen!2s!4v1665499252457!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOfoQEnSeEMhNmp8NI6ZZGulHloVCIZUA
+      &callback=initMap"></script>
+</body>
+
+</html>

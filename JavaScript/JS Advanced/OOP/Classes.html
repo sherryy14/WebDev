@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="container"></div>
+<div class="container"></div>
+<body>
+    <script>
+        
+        class Student{
+            constructor(name,age,education){
+                this.stdName = name;
+                this.stdAge = age;
+                this.stdEducation = education;
+            }
+            // instence method which can be an object
+
+            Biodata(){
+                let data = document.getElementsByClassName('container')[0]
+                data.innerHTML = `
+                    <h1> Student Name: ${this.stdName} </h1>
+                    <h3> Student Age: ${this.stdAge} </h3>
+                    <h3> Student Education: ${this.stdEducation} </h3>
+                `
+                let data1 = document.getElementsByClassName('container')[1]
+                data1.innerHTML = `
+                    <h1> Student Name: ${this.stdName} </h1>
+                    <h3> Student Age: ${this.stdAge} </h3>
+                    <h3> Student Education: ${this.stdEducation} </h3>
+                `
+                console.log(this.stdName + this.stdAge + this.stdEducation)
+            }
+        }
+
+        class Developer extends Student{
+            // constructor(name, age, education, dept){
+            //     this.department = dept;
+            // }
+            // super()
+            // Fullstack(){
+            //     console.log(this.department)
+            // }
+
+        }
+        // let dev1 = new Developer("Ali",34,"MS",'Full Stack')
+        // dev1.Fullstack()
+        
+
+        let student1 = new Developer('Shahryar',25,"MCS")
+        let student2 = new Student('Kashan',27,"BSC")
+        let student3 = new Student('Hassan',25,"BCS")
+        student1.Biodata()
+        student2.Biodata()
+        student3.Biodata()
+    </script>
+</body>
+</html>

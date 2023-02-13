@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Geolocation</h1>
+
+    <input type="button" value="Display Location" onclick="getLocation()">
+
+    <script>
+        var geolocate = window.navigator.geolocation;
+        console.log(geolocate)
+        // Checking Support 
+        if(navigator.geolocation){
+            console.log("Supported")
+        }else{
+            console.log("Not Supported")
+
+        }
+
+
+
+        // Getting latitude and longitude
+        const successcallback = (position)=>{
+            console.log(position)
+        }
+        const errorcallback = (error)=>{
+            console.log(error)
+        }
+        navigator.geolocation.getCurrentPosition(successcallback,errorcallback)
+
+
+
+        function getLocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition((position)=>{
+            console.log("Latitude: " +position.coords.latitude + "\n"+ "Longitude: " +position.coords.longitude)
+        })
+            }else{
+                alert("Your browser does not support Geolocation");
+            }
+        }
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

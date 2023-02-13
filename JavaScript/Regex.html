@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Contact: <span id="contact">03062187681</span></h1>
+    <input type="tel" name="tell" id="tel">
+    <input type="submit" value="Submit" id="btn">
+
+    <script>
+        // const str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        // const regexp = /[A-E]/g;
+        // const matches = str.match(regexp);
+
+        // console.log(matches);
+        // console.log(tel.value)
+        btn.addEventListener('click', () => {
+            // let userVal = tel.value;
+            // let text = headr.innerText;
+            // let result = text.replace(/sherry/i, "W3Schools");
+            // headr.innerText = result;
+
+            let contactRegex = /^((03)|(\+923))[0-9]{9}$/;
+            let telNum = tel.value;
+            console.log(contactRegex.test(telNum))
+            console.log(telNum.match(contactRegex))
+            if (contactRegex.test(telNum)) {
+                console.log('Valid Number')
+            } else {
+                console.log('Invalid Number')
+            }
+        })
+
+    </script>
+</body>
+
+</html>

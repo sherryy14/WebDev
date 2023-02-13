@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IndexedDB</title>
+</head>
+
+<body>
+ 
+    <input type="submit" value="Submit" id="btn">
+
+
+
+
+    <script>
+
+        var indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB; 
+        if("indexedDB" in window){
+            console.log("Supported")
+            
+        }else{
+            console.log("Not Supported")
+
+        }
+
+        let btn = document.querySelector('#btn');
+        btn.addEventListener("click",()=>{
+            const dbname = "MyDataBase";
+            const requestDb = window.indexedDB.open(dbname);
+
+            requestDb.onupgradeneeded = ()=>{
+                let db = requestDb.result;
+                let store = db.createObjectStore("book",{keyPath: "id", autoIncrement:true});
+
+                store.put({title: "Daily tution",author:"Sherry"})
+                store.put({title: "Press",author:"Kashan"})
+                store.put({title: "Aptech Learning",author:"Roohan"})
+                store.put({title: "Black Holes",author:"Stephen Hawking"})
+            }
+        requestDb.onsuccess= () =>{
+            if(requestDb.readyState == "done"){
+                console.log("Data Stored")
+            }
+        }
+        }
+        )
+
+    </script>
+</body>
+
+</html>
