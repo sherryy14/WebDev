@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="search" id="searchVal">
+    <button id="search">Search</button>
+    <h1 id="mealHead"></h1>
+    <img src="${}" alt="">
+    <div id="meal"></div>
+<p id="mealRec"></p>    
+
+
+
+
+<script>
+    let btn = document.getElementById('search')
+    const mealList = document.getElementById('meal');
+    btn.addEventListener('click',()=>{
+        let searchVal = document.getElementById('searchVal').value
+        fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast')
+        .then(response => response.json()) .then(data => {
+            let html = "";
+            console.log(data.meals)
+            if (data.meals) {
+                data.meals.forEach(meal => {
+                    html += `
+                    <div class = "meal-item" data-id = "${meal.idMeal}">
+                        <div class = "meal-img">
+                            <img src = "${meal.strMealThumb}" alt = "food">
+                        </div>
+                        <div class = "meal-name">
+                            <h3>${meal.strMeal}</h3>
+                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                        </div>
+                    </div>
+                `;
+                });
+               
+            } else {
+                html = "Sorry, we didn't find any meal!";
+             
+            }
+
+            mealList.innerHTML = html;
+        });
+})
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="custom.css" />
+</head>
+
+<body>
+    <main>
+        <div class="row" style="text-align: center;">
+            <form action="">
+                <input type="search" id="search" placeholder="Search by city name">
+            </form>
+        </div>
+        <div class="row" id="weather">
+            <div>
+                <img src="https://openweathermap.org/img/wn/04n@2x.png" alt="">
+            </div>
+            <div>
+                <h2>32 ℃</h2>
+                <h4> Clear  </h4>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="app.js"></script> -->
+    <script>
+        const API_KEY = `729f85148a5f210b81d549b8a8081b2a`
+        const form = document.querySelector("form")
+        const search = document.querySelector("#search")
+        const weather = document.querySelector("#weather")
+        // const API = `https://api.openweathermap.org/data/2.5/weather?
+        // q=${city}&appid=${API_KEY}&units=metric`
+        // const IMG_URL = `https: //openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        
+        const getWeather = async (city) => {
+            
+            weather.innerHTML = `Loading...`
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data.main)
+            return showWeather(data)
+        }
+          
+        const showWeather = (data) => {
+         
+            if (data.cod == "404") {
+                weather.innerHTML = `City Not Found`
+                return;
+            }
+            weather.innerHTML = `
+        <div>
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="">
+        </div>
+        <div>
+            <h2>${data.main.temp} ℃</h2>
+            <h4> ${data.weather[0].main} </h4>
+        </div>
+    `
+        }
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+                getWeather(search.value)
+                event.preventDefault();
+            }
+        )
+
+    </script>
+</body>
+
+</html>

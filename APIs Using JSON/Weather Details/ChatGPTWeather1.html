@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Weather</title>
+    <style>
+      /* Add some style to the page */
+      body {
+        font-family: sans-serif;
+      }
+      .weather {margin: auto;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: beige;
+      }
+      .weather h1 {
+        font-size: 2em;
+        margin: 0.5em 0;
+      }
+      .weather img {
+        width: 5em;
+      }
+      .weather p {
+        font-size: 1.5em;
+        margin: 0.5em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather">
+      <h1>Loading weather...</h1>
+      <img src="" alt="Weather icon" id="icon">
+      <p id="temperature">?</p>
+    </div>
+    <script>
+      // Get the current location of the user
+      navigator.geolocation.getCurrentPosition(position => {
+        // Get the latitude and longitude of the user's location
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        
+        // Use the OpenWeatherMap API to get the current weather for the user's location
+        const apiKey = "b9d29b3a7e655f9c16c91c1af1e16db7";
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`;
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+            // Get the temperature and weather icon from the API response
+            const temperature = data.main.temp;
+            const weatherIcon = data.weather[0].icon;
+            const iconUrl = `https://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+            
+            // Update the page with the temperature and weather icon
+            document.getElementById("temperature").innerHTML = temperature + "°F";
+            document.getElementById("icon").src = iconUrl;
+          });
+      });
+    </script>
+  </body>
+</html>
