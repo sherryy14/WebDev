@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funcation</h1>
+    <form action="">
+
+        <label for="qauntity">Add Qauntity</label>
+        <input type="number" name="" id="qauntity" min="0">
+        <br>
+      
+
+        <input type="button" value="Add Cart" onclick="doMath()" id="btn">
+
+
+    </form>
+
+        <p id="btn"></p>
+
+        <script>
+        function doMath(){
+            var p1 = document.getElementById('qauntity').value;
+            // var p2 = document.getElementById('product').value;
+      
+            var myproduct = parseInt(p1) * 5;
+            document.write(myproduct+"$");
+        }   
+       
+      
+     
+
+
+        </script>
+    
+</body>
+</html>

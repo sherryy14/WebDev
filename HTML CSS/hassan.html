@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+
+height: 2000px;
+
+
+    }
+    .square {
+        border: 5px solid red;
+        text-align: center;
+        height: 200px;
+        width: 200px;
+        margin: 5px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding-top: 79px;
+        z-index: 1;
+
+    }
+/* 
+    .chat {
+
+        position:  fixed;
+        top: 100px;
+        border: 10px solid black;
+        z-index: -1;
+    
+        
+        
+    } */
+
+    /* #div4{
+transition-property: ;
+
+    } */
+    .animation {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        position: relative;
+        border-radius: 100px;
+        animation-name:myfirst;
+        animation-duration:4s;
+        animation-timing-function:linear;
+        animation-delay:1s;
+        animation-iteration-count:1;
+        animation-direction:alternate;
+        animation-play-state:running;
+        border-radius: 100px;
+        -webkit-animation-name:myfirst;
+        -webkit-animation-duration:4s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay:1s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-direction:alternate;
+        -webkit-animation-play-state:running;
+    }
+
+     
+@keyframes myfirst
+{
+    0% {background:red; left:0px; top:0px;}
+    25% {background:yellow; left:300px; top:0px;}
+    50% {background:blue; left:300px; top:300px;}
+    75% {background:green; left:0px; top:300px;}
+    100% {background:red; left:0px; top:0px;}
+}
+@-webkit-keyframes myfirst
+{
+    0% {background:red; left:0px; top:0px;}
+    25% {background:yellow; left:300px; top:0px;}
+    50% {background:blue; left:300px; top:300px;}
+    75% {background:green; left:0px; top:300px;}
+    100% {background:red; left:0px; top:0px;}
+}
+
+
+</style>
+
+<body>
+
+    <div>
+      
+        <h1>Aptech learning</h1>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt qui possimus vel dolores illo velit, a eius
+            quis ad unde impedit! In quidem eos molestiae voluptatem nesciunt natus quisquam aperiam voluptatibus quos.
+        </p>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt qui possimus vel dolores illo velit, a eius
+            quis ad unde impedit! In quidem eos molestiae voluptatem nesciunt natus quisquam aperiam voluptatibus quos.
+        </p>
+    </div>
+    <div>
+        <div class="square">1</div>
+        <div class="square">2</div>
+        <div class="square chat" >3</div>
+        <div class="square" id="div4">4</div>
+    </div>
+
+    <div class="animation"></div>
+</body>
+
+</html>

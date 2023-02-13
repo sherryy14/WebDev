@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    /* Descendant Selector */
+    /* div p{
+        color: blue;
+    } */
+    /* Child Selector  */
+    /* div > p{
+        color: chartreuse;
+    } */
+
+    /* Adjacent Sibling Selector  */
+    /* div + p{
+        color: chocolate;
+    } */
+
+    /* General Sibling Selector */
+
+    div ~ p{
+        color: blue;
+        /* border-top-style: dotted;
+        border-bottom-style: solid;
+        border-left-style: dashed;
+        border-right-style: double; */
+        border-style: dotted double solid dashed;
+        border-color: red green yellow pink;
+        border-width: 2px 4px 6px 8px;
+    }
+    h2{
+        border: 2px solid blue ;
+        text-align: center;
+        border-radius:  2px  10px;
+    }
+   
+
+</style>
+<body>
+    <div>
+        <h1>Selectors</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ad.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ad.</p>
+        <ul>
+            <li>Paragraph</li>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </ul>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ad.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ad.</p>
+    </div>
+    <h2>Siblings</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, doloremque.</p>
+</body>
+</html>

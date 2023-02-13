@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    .navbar {
+        display: flex;
+        /* background-color: rgb(138, 255, 109); */
+        /* padding: 20px; */
+        /* float: right; */
+        justify-content: flex-end;
+
+    }
+
+
+    .navbar a {
+        /* text-align: right; */
+        color: rgb(3, 2, 0);
+        margin: 15px;
+
+    }
+
+    .navbar a:hover {
+        background-color: tomato;
+        text-decoration: underline;
+    }
+
+    .heading1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        /* text-align: center; */
+        text-transform: uppercase;
+
+    }
+
+    #flexhead {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
+
+    .navbar .anc {
+        border: 1px dotted black;
+        padding: 15px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: khaki;
+        text-decoration: none;
+    }
+
+    .container {
+        background-image: linear-gradient( red, yellow, green);
+        position: sticky;
+        top: 0;
+    }
+
+    .item1, .item2{
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        border: 2px solid red;
+        display: inline-block;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .item1{
+        position: relative;
+        top: 100px;
+      
+    }
+    #item{
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        position: sticky;
+        left: 95%;
+        top: 94%;
+        visibility: hidden;
+    }
+</style>
+
+<body style="background-color: whitesmoke;  overflow: auto;"  id="scrollDemo">
+    <div class="container">
+
+        <div id="flexhead">
+            <h1 class="heading1">Nike</h1>
+        </div>
+        <div class="navbar">
+
+            <a class="anc" href="./navbar.html">Home</a>
+            <a class="anc" href="./prac.html">Contact Us</a>
+            <a class="anc" href="./tiy.html">About</a>
+
+        </div>
+    </div>
+    <img src="flower.jpg" width="100%" height="300px">
+    <div id="item">Scroll</div>
+    
+    <div class="output">gh</div>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde corporis recusandae suscipit eum sequi quas et commodi. Quia, hic? Sed.</p>
+    <div class="item1">Item1</div>
+    <div class="item2">Item2</div> -->
+    <script>
+        // function btn(){
+        //     document.getElementById("item").style.visibility = "visible";
+
+        // }
+        const scrollDemo = document.getElementById("item");
+        const output = document.querySelector(".output");
+
+        scrollDemo.addEventListener("scroll", event => {
+            output.innerHTML = `scrollTop: ${scrollDemo.scrollTop} <br>
+                                scrollLeft: ${scrollDemo.scrollLeft} `;
+        }, { passive: true });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+ <style>
+     body{
+         margin: 0;
+         padding: 0;
+     }
+  
+    .item1{
+       grid-area: header;
+       height: 100px;
+
+   }
+   .item2{
+       grid-area: button;
+       height: auto;
+       display: flex;
+       
+   }
+   .item2 .btn{
+        border: 1px solid black;
+        flex-grow: 1;
+        /* line-height: 35px; */
+        height: 80px;
+        margin: 0 10px;
+        border-radius: 20px;
+        box-shadow: 2px 5px 4px 5px rgba(24, 68, 134,0.3);
+
+
+      
+   }
+   .item3{
+       grid-area: side;
+       height: 400px;
+   }
+   .item4{
+       grid-area: imgside;
+       height: auto;
+
+   }
+   .item5{
+       grid-area: client;
+       height: 150px;
+   }
+   .item6{
+       grid-area: img;
+       height: 200px;
+   }
+   .item7{
+       grid-area: footer;
+       height: auto;
+   }
+   
+    .grid-container{
+        display: grid;
+        grid-template-areas: 'header header header header header' 'button button button button button' 'side side imgside imgside imgside' 
+        ' client client client client client' 'img img img img img' 'footer footer footer footer footer';
+        grid-gap: 10px;
+        padding: 10px;
+        background-color: darkkhaki;
+        grid-gap: 10px 20px;
+    }
+    .grid-container .item{
+        background-color: darkgrey;
+        border: 2px solid lightseagreen;
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+
+    }
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item item1">Header</div>
+
+        <div class="item item2">
+            <div class="btn">button 1</div>
+            <div class="btn">button 2</div>
+            <div class="btn">button 3</div>
+            <div class="btn">button 4</div>
+            <div class="btn">button 5</div>
+        </div>
+
+        <div class="item item3">Side</div>
+        <div class="item item4">Side Image</div>
+        <div class="item item5">Clients</div>
+        <div class="item item6">Images Only</div>
+        <div class="item item7">Footer</div>
+    </div>
+</body>
+</html>
