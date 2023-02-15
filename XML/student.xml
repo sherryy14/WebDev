@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-model href="std.dtd" type="application/xml-dtd"?> -->
+<!DOCTYPE student [
+    <!ELEMENT student (stddetails,stddetails,stddetails)>
+    <!ELEMENT stddetails (name,age,batch,email)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT age (#PCDATA)>
+    <!ELEMENT batch (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT gender (#PCDATA)>
+    <!ENTITY b "2208C2">
+    <!ATTLIST gender g  CDATA (male | female)>
+]>
+
+<student>
+  <stddetails >
+    <name>Ahmed</name>
+    <age>12</age>
+    <batch>&b;</batch>
+    <email>ahmed@gmail.com</email>
+    <gender  g='male'/>
+  </stddetails>
+  <stddetails >
+    <name>Ahmed</name>
+    <age>12</age>
+    <batch>&b;</batch>
+    <email>ahmed@gmail.com</email>
+  </stddetails>
+  <stddetails>
+    <name>Ahmed</name>
+    <age>12</age>
+    <batch>&b;</batch>
+    <email>ahmed@gmail.com</email>
+  </stddetails>
+</student>
